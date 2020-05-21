@@ -1,0 +1,15 @@
+step 1: Download psexec zip file
+
+link : https://docs.microsoft.com/en-us/sysinternals/downloads/psexec
+
+step 2: copy the files to C:\windows\system32
+
+step 3: run below command to test the connection on remote host
+
+> psexec \\ipaddress -u hostname\username -p password -di ipconfig
+
+step 4: to start a service
+
+> psexec \\ipaddress -u hostname\username -p password net start "Zabbix Agent"
+
+there is no restart command to initiate , to do restart first stop the service and then start the service.
